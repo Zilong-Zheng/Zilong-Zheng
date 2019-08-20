@@ -1,0 +1,297 @@
+SQL> 
+SQL> DROP TABLE unit CASCADE CONSTRAINTS PURGE;
+
+Table UNIT dropped.
+
+SQL> 
+SQL> CREATE TABLE unit (
+  2      unit_code   CHAR(7) NOT NULL,
+  3      unit_name   VARCHAR(50) NOT NULL
+  4  );
+
+Table UNIT created.
+
+SQL> 
+SQL> ALTER TABLE unit ADD CONSTRAINT uq_unit_name UNIQUE ( unit_name );
+
+Table UNIT altered.
+
+SQL> 
+SQL> ALTER TABLE unit ADD CONSTRAINT unit_pk PRIMARY KEY ( unit_code );
+
+Table UNIT altered.
+
+SQL> 
+SQL> DROP TABLE student CASCADE CONSTRAINTS PURGE;
+
+Table STUDENT dropped.
+
+SQL> 
+SQL> CREATE TABLE student (
+  2      stu_nbr     NUMERIC(8) NOT NULL,
+  3      stu_lname   VARCHAR(50) NOT NULL,
+  4      stu_fname   VARCHAR(50) NOT NULL,
+  5      stu_dob     DATE
+  6  );
+
+Table STUDENT created.
+
+SQL> 
+SQL> ALTER TABLE student ADD CONSTRAINT ck_stu_nbr CHECK ( stu_nbr > 10000000 );
+
+Table STUDENT altered.
+
+SQL> 
+SQL> ALTER TABLE student ADD CONSTRAINT student_pk PRIMARY KEY ( stu_nbr );
+
+Table STUDENT altered.
+
+SQL> 
+SQL> DROP TABLE enrolment PURGE;
+
+Table ENROLMENT dropped.
+
+SQL> 
+SQL> CREATE TABLE enrolment (
+  2      stu_nbr          NUMERIC(8),
+  3      unit_code        CHAR(7),
+  4      enrol_year       NUMERIC(4),
+  5      enrol_semester   CHAR(1),
+  6      enrol_mark       NUMERIC(3),
+  7      enrol_grade      CHAR(2)
+  8  );
+
+Table ENROLMENT created.
+
+SQL> 
+SQL> ALTER TABLE enrolment
+  2      ADD CONSTRAINT enrol_sem_value CHECK ( enrol_semester IN (
+  3          '1',
+  4          '2',
+  5          '3'
+  6      ) );
+
+Table ENROLMENT altered.
+
+SQL> 
+SQL> ALTER TABLE enrolment
+  2      ADD CONSTRAINT enrolment_pk PRIMARY KEY ( stu_nbr,
+  3                                                unit_code,
+  4                                                enrol_year,
+  5                                                enrol_semester );
+
+Table ENROLMENT altered.
+
+SQL> 
+SQL> ALTER TABLE enrolment
+  2      ADD CONSTRAINT enrolment_fk_student FOREIGN KEY ( stu_nbr )
+  3          REFERENCES student ( stu_nbr );
+
+Table ENROLMENT altered.
+
+SQL> 
+SQL> ALTER TABLE enrolment
+  2      ADD CONSTRAINT enrolment_fk_unit FOREIGN KEY ( unit_code )
+  3          REFERENCES unit ( unit_code );
+
+Table ENROLMENT altered.
+
+SQL> 
+SQL> INSERT INTO student VALUES (
+  2      11111111,
+  3      'Bloggs',
+  4      'Fred',
+  5      '01-Jan-1990'
+  6  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO student VALUES (
+  2      11111112,
+  3      'Nice',
+  4      'Nick',
+  5      '10-Oct-1994'
+  6  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO student VALUES (
+  2      11111113,
+  3      'Wheat',
+  4      'Wendy',
+  5      '05-May-1990'
+  6  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO student VALUES (
+  2      11111114,
+  3      'Sheen',
+  4      'Cindy',
+  5      '25-Dec-1996'
+  6  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO unit VALUES (
+  2      'FIT5132',
+  3      'Introduction to Databases'
+  4  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO unit VALUES (
+  2      'FIT5016',
+  3      'Project'
+  4  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO unit VALUES (
+  2      'FIT5111',
+  3      'Student''s Life'
+  4  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO unit VALUES (
+  2      'FIT9999',
+  3      'FIT Last Unit'
+  4  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO enrolment VALUES (
+  2      11111111,
+  3      'FIT5132',
+  4      2013,
+  5      '1',
+  6      35,
+  7      'N'
+  8  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO enrolment VALUES (
+  2      11111111,
+  3      'FIT5016',
+  4      2013,
+  5      '1',
+  6      61,
+  7      'C'
+  8  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO enrolment VALUES (
+  2      11111111,
+  3      'FIT5132',
+  4      2013,
+  5      '2',
+  6      42,
+  7      'N'
+  8  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO enrolment VALUES (
+  2      11111111,
+  3      'FIT5111',
+  4      2013,
+  5      '2',
+  6      76,
+  7      'D'
+  8  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO enrolment VALUES (
+  2      11111111,
+  3      'FIT5132',
+  4      2014,
+  5      '2',
+  6      NULL,
+  7      NULL
+  8  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO enrolment VALUES (
+  2      11111112,
+  3      'FIT5132',
+  4      2013,
+  5      '2',
+  6      83,
+  7      'HD'
+  8  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO enrolment VALUES (
+  2      11111112,
+  3      'FIT5111',
+  4      2013,
+  5      '2',
+  6      79,
+  7      'D'
+  8  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO enrolment VALUES (
+  2      11111113,
+  3      'FIT5132',
+  4      2014,
+  5      '2',
+  6      NULL,
+  7      NULL
+  8  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO enrolment VALUES (
+  2      11111113,
+  3      'FIT5111',
+  4      2014,
+  5      '2',
+  6      NULL,
+  7      NULL
+  8  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO enrolment VALUES (
+  2      11111114,
+  3      'FIT5111',
+  4      2014,
+  5      '2',
+  6      NULL,
+  7      NULL
+  8  );
+
+1 row inserted.
+
+SQL> 
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> 
+SQL> SET ECHO OFF

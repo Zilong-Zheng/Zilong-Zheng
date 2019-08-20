@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2EE7E370-B3C0-D076-E78B-E3ABA0D4D6D2" name="PRODUCT">
+<createdBy>Cyrus</createdBy>
+<createdTime>2019-04-01 02:47:51 UTC</createdTime>
+<ownerDesignName>week5</ownerDesignName>
+<engineerTo>
+<item key="C5A2A288-779E-6ABB-FC8E-7D8998820340" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="product number" id="FDD9A79E-2F84-C76C-E38A-27B5E5F64803">
+<createdBy>Cyrus</createdBy>
+<createdTime>2019-04-01 02:48:05 UTC</createdTime>
+<ownerDesignName>week5</ownerDesignName>
+<engineerTo>
+<item key="C5A2A288-779E-6ABB-FC8E-7D8998820340" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="product description" id="C208B486-C183-90D6-2CEB-E9F5059D1EAB">
+<createdBy>Cyrus</createdBy>
+<createdTime>2019-04-01 02:48:41 UTC</createdTime>
+<ownerDesignName>week5</ownerDesignName>
+<engineerTo>
+<item key="C5A2A288-779E-6ABB-FC8E-7D8998820340" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="product unit price" id="F065C5C8-555C-BF9C-4CA8-286E5191ADAE">
+<createdBy>Cyrus</createdBy>
+<createdTime>2019-04-01 02:50:31 UTC</createdTime>
+<ownerDesignName>week5</ownerDesignName>
+<engineerTo>
+<item key="C5A2A288-779E-6ABB-FC8E-7D8998820340" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="85B98A4B-66D1-4D3E-6FB0-5DC8E671F87A" name="PRODUCT PK">
+<createdBy>Cyrus</createdBy>
+<createdTime>2019-04-01 02:48:35 UTC</createdTime>
+<ownerDesignName>week5</ownerDesignName>
+<engineerTo>
+<item key="C5A2A288-779E-6ABB-FC8E-7D8998820340" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>FDD9A79E-2F84-C76C-E38A-27B5E5F64803</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

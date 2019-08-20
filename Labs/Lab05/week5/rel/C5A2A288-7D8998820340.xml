@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="C5A2A288-779E-6ABB-FC8E-7D8998820340" mainViewID="8336B01C-306F-08A3-F501-A14D4560A1CF">
+<createdBy>Cyrus</createdBy>
+<createdTime>2019-04-01 01:54:37 UTC</createdTime>
+<ownerDesignName>week5</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>3FD120B5-9F4E-6278-D5E2-746D192C8319</selectedRDBMSSite>
+</relationalModel>

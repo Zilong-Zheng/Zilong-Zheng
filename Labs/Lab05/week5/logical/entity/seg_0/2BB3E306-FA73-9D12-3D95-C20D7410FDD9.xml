@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2BB3E306-FA73-9D12-3D95-C20D7410FDD9" name="ORDERLINE">
+<createdBy>Cyrus</createdBy>
+<createdTime>2019-04-01 02:52:37 UTC</createdTime>
+<ownerDesignName>week5</ownerDesignName>
+<engineerTo>
+<item key="C5A2A288-779E-6ABB-FC8E-7D8998820340" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="orderno" id="C2BFAAFA-CBBA-F763-D093-728CF0C0F9F7">
+<createdBy>Cyrus</createdBy>
+<createdTime>2019-04-01 02:52:49 UTC</createdTime>
+<ownerDesignName>week5</ownerDesignName>
+<engineerTo>
+<item key="C5A2A288-779E-6ABB-FC8E-7D8998820340" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="prodno" id="FC4B84E3-8EAF-F4F4-C3BF-F0E10088ADAD">
+<createdBy>Cyrus</createdBy>
+<createdTime>2019-04-01 02:53:19 UTC</createdTime>
+<ownerDesignName>week5</ownerDesignName>
+<engineerTo>
+<item key="C5A2A288-779E-6ABB-FC8E-7D8998820340" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="qtyordered" id="84367115-0927-A014-9327-C5065391D761">
+<createdBy>Cyrus</createdBy>
+<createdTime>2019-04-01 02:55:56 UTC</createdTime>
+<ownerDesignName>week5</ownerDesignName>
+<engineerTo>
+<item key="C5A2A288-779E-6ABB-FC8E-7D8998820340" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="lineprice" id="C1988EB9-50D7-70C9-D8B8-CC086C82C67B">
+<createdBy>Cyrus</createdBy>
+<createdTime>2019-04-01 02:57:06 UTC</createdTime>
+<ownerDesignName>week5</ownerDesignName>
+<engineerTo>
+<item key="C5A2A288-779E-6ABB-FC8E-7D8998820340" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="orderno1" id="A1DC97D1-46D8-6386-B71C-1B501B7E9EF5">
+<createdBy>Cyrus</createdBy>
+<createdTime>2019-04-01 02:58:22 UTC</createdTime>
+<comment>Comments in the ORDERS</comment>
+<generatorID>247DB15E-28F2-96E4-6614-5095C9623722</generatorID>
+<ownerDesignName>week5</ownerDesignName>
+<engineerTo>
+<item key="C5A2A288-779E-6ABB-FC8E-7D8998820340" value="true"/>
+</engineerTo>
+<referedAttribute>40FED07D-ACED-B836-1E35-C28A257F4859</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="08D67600-9096-EEB5-DC46-D96A7FEF340B" name="ORDERLINE PK">
+<createdBy>Cyrus</createdBy>
+<createdTime>2019-04-01 02:53:16 UTC</createdTime>
+<ownerDesignName>week5</ownerDesignName>
+<engineerTo>
+<item key="C5A2A288-779E-6ABB-FC8E-7D8998820340" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C2BFAAFA-CBBA-F763-D093-728CF0C0F9F7</attributeRef>
+<attributeRef>FC4B84E3-8EAF-F4F4-C3BF-F0E10088ADAD</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

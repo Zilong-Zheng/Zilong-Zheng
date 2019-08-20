@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="111A6680-B375-940B-4F0E-8267333F1118" mainViewID="919FF2E2-C85C-B97E-6E6A-232D85C78478">
+<createdBy>Cyrus</createdBy>
+<createdTime>2019-04-01 01:45:09 UTC</createdTime>
+<ownerDesignName>week5</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

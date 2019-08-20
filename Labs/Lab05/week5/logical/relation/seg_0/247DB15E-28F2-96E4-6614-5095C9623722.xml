@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="contains" directorySegmentName="seg_0" id="247DB15E-28F2-96E4-6614-5095C9623722">
+<createdBy>Cyrus</createdBy>
+<createdTime>2019-04-01 02:58:22 UTC</createdTime>
+<ownerDesignName>week5</ownerDesignName>
+<engineerTo>
+<item key="C5A2A288-779E-6ABB-FC8E-7D8998820340" value="true"/>
+</engineerTo>
+<sourcePk>9AC12A3F-D21E-8895-F640-C00465B0EFB1</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>BF4C297D-62F6-1972-5327-578895F329CA</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>2BB3E306-FA73-9D12-3D95-C20D7410FDD9</targetEntity>
+<transferable>true</transferable>
+</Relation>

@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="week5" id="E0E489EB-5744-20AB-F26B-4F7E573327B3" version="3.5">
+<createdBy>Cyrus</createdBy>
+<createdTime>2019-04-01 01:45:09 UTC</createdTime>
+<ownerDesignName>week5</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>E0E489EB-5744-20AB-F26B-4F7E573327B3</designId>
+</OSDM_Design>
